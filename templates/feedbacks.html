@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Подключаем стили -->
+</head>
+<body>
+    <div class="container">
+        <h1>Отзывы</h1>
+        <a href="/" class="back-button">Назад к форме</a> <!-- Кнопка "Назад к форме" -->
+        <div>
+            {% for feedback in feedbacks %} <!-- Перебираем отзывы -->
+                <div class="feedback-item">
+                    <strong>{{ feedback.name }}</strong> <!-- Имя автора отзыва -->
+                    <p>{{ feedback.message }}</p> <!-- Текст отзыва -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
